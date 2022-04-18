@@ -1,8 +1,14 @@
 /*===================== 	Premery bg color =====================*/
 
-:root {
-    --primary: #4c1864;
+
+/* :root {
+    --primary: #B2902F;
     --sc-primary: #4d0a91;
+} */
+
+:root {
+    --primary: #B2902F;
+    --sc-primary: #f7b205;
 }
 
 
@@ -23,7 +29,7 @@
 .pagination-bx.primary .pagination>li>span,
 button.back-to-top,
 .rev-btn {
-    background-color: #4c1864;
+    background-color: #B2902F;
 }
 
 
@@ -91,7 +97,7 @@ h5 a:hover,
 h6 a:hover,
 .btn.outline,
 .btn-link:hover {
-    color: #4c1864;
+    color: #B2902F;
 }
 
 
@@ -113,7 +119,7 @@ h6 a:hover,
 .ovpr-dark:after,
 .ovpr:after,
 .bg-primary {
-    background-color: #4c1864;
+    background-color: #B2902F;
 }
 
 .footer-top,
@@ -144,16 +150,16 @@ h6 a:hover,
 .ovpr-dark:after,
 .pricingtable-main,
 .account-head:after {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c1864+0,3f189a+100 */
-    background: #4c1864;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#B2902F+0,3f189a+100 */
+    background: #B2902F;
     /* Old browsers */
-    background: -moz-linear-gradient(45deg, #4c1864 0%, #3f189a 100%);
+    background: -moz-linear-gradient(45deg, #B2902F 0%, #3f189a 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #4c1864 0%, #3f189a 100%);
+    background: -webkit-linear-gradient(45deg, #B2902F 0%, #3f189a 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #4c1864 0%, #3f189a 100%);
+    background: linear-gradient(45deg, #B2902F 0%, #3f189a 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4c1864', endColorstr='#3f189a', GradientType=1);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#B2902F', endColorstr='#3f189a', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -200,7 +206,7 @@ button.back-to-top:hover,
 .recent-news-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover,
 .testimonial-carousel .owl-nav .owl-prev:hover {
-    background-color: #4c1864;
+    background-color: #B2902F;
     color: #fff;
 }
 
