@@ -4,125 +4,247 @@
 
 <head>
 
-	<!-- META ============================================= -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<meta name="robots" content="" />
-	
-	<!-- DESCRIPTION -->
-	<meta name="description" content="EduChamp : Education HTML Template" />
-	
-	<!-- OG -->
-	<meta property="og:title" content="EduChamp : Education HTML Template" />
-	<meta property="og:description" content="EduChamp : Education HTML Template" />
-	<meta property="og:image" content="" />
-	<meta name="format-detection" content="telephone=no">
-	
-	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
-	
-	<!-- PAGE TITLE HERE ============================================= -->
-	<title>EduChamp : Education HTML Template </title>
-	
-	<!-- MOBILE SPECIFIC ============================================= -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!--[if lt IE 9]>
+    <!-- META ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="EduChamp : Education HTML Template" />
+
+    <!-- OG -->
+    <meta property="og:title" content="EduChamp : Education HTML Template" />
+    <meta property="og:description" content="EduChamp : Education HTML Template" />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- FAVICONS ICON ============================================= -->
+    <link rel="icon" href="assets/images/logo/LOGO_PLURIELLES.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/LOGO_PLURIELLES.png" />
+
+    <!-- PAGE TITLE HERE ============================================= -->
+    <title>Pluri'Elles | Connexion </title>
+
+    <!-- MOBILE SPECIFIC ============================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.min.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap" rel="stylesheet">
-	
-	<!-- All PLUGINS CSS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/assets.css">
-	
-	<!-- TYPOGRAPHY ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/typography.css">
-	
-	<!-- SHORTCODES ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/shortcodes/shortcodes.css">
-	
-	<!-- STYLESHEETS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
-	
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- All PLUGINS CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/assets.css">
+
+    <!-- TYPOGRAPHY ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/typography.css">
+
+    <!-- SHORTCODES ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/shortcodes/shortcodes.css">
+
+    <!-- STYLESHEETS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
+
+    <style>
+        .loader {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1000;
+            background: #fff;
+        }
+        
+        .loader>* {
+            margin: 0;
+            padding: 0;
+            left: 0;
+        }
+        
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .loader-container {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            width: 100vw !important;
+            padding: 20px 0;
+        }
+        
+        .loader-container::after {
+            position: absolute;
+            content: '';
+            width: 150px;
+            height: 10px;
+            z-index: 1;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: radial-gradient(grey, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+            animation: elarg 1.3s ease-out 2.5s infinite alternate;
+        }
+        
+        .loarding-text {
+            position: absolute;
+            left: 50%;
+            z-index: 2;
+            font-size: 21px;
+            bottom: -35px;
+            letter-spacing: 6px;
+            font-family: 'Raleway', sans-serif;
+            transform: translateX(-50%);
+        }
+        
+        .globe {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to bottom, rgb(214, 220, 223), #bbc4c7);
+            border-radius: 50%;
+            overflow: hidden;
+            animation: swip 1.3s ease-out 2.5s infinite alternate;
+        }
+        
+        .globe img {
+            /*filter: brightness(1000%) invert(1);*/
+            position: absolute;
+            width: 200%;
+            height: 110%;
+            left: 100%;
+            animation-name: move;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear
+        }
+        
+        .globe img:nth-child(1) {}
+        
+        .globe img:nth-child(2) {
+            animation-delay: 6s;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        
+        @keyframes swip {
+            0% {
+                transform: translate(-50%, 10px);
+            }
+            100% {
+                transform: translateY(0%, -10%);
+            }
+        }
+        
+        @keyframes elarg {
+            0% {
+                width: 80px;
+            }
+            100% {
+                width: 150px;
+            }
+        }
+    </style>
+
 </head>
+
 <body id="bg">
-<div class="page-wraper">
-	<div id="loading-icon-bx"></div>
-	<div class="account-form">
-		<div class="account-head" style="background-image:url(assets/images/background/bg2.jpg);">
-			<a href="index.html"><img src="assets/images/logo/téléchargement-removebg-preview.png" alt=""></a>
-		</div>
-		<div class="account-form-inner">
-			<div class="account-container">
-				<div class="heading-bx left">
-					<h2 class="title-head">Login to your <span>Account</span></h2>
-					<p>Don't have an account? <a href="register.html">Create one here</a></p>
-				</div>	
-				<form class="contact-bx">
-					<div class="row placeani">
-						<div class="col-lg-12">
-							<div class="form-group">
-								<div class="input-group">
-									<label>Your Name</label>
-									<input name="dzName" type="text" required="" class="form-control">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group">
-								<div class="input-group"> 
-									<label>Your Password</label>
-									<input name="dzEmail" type="password" class="form-control" required="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group form-forget">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-									<label class="custom-control-label" for="customControlAutosizing">Remember me</label>
-								</div>
-								<a href="forget-password.html" class="ml-auto">Forgot Password?</a>
-							</div>
-						</div>
-						<div class="col-lg-12 m-b30">
-							<button name="submit" type="submit" value="Submit" class="btn button-md">Login</button>
-						</div>
-						<div class="col-lg-12">
-							<h6>Login with Social media</h6>
-							<div class="d-flex">
-								<a class="btn flex-fill m-r5 facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a>
-								<a class="btn flex-fill m-l5 google-plus" href="#"><i class="fa fa-google-plus"></i>Google Plus</a>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- External JavaScripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/vendors/bootstrap/js/popper.min.js"></script>
-<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="assets/vendors/magnific-popup/magnific-popup.js"></script>
-<script src="assets/vendors/counter/waypoints-min.js"></script>
-<script src="assets/vendors/counter/counterup.min.js"></script>
-<script src="assets/vendors/imagesloaded/imagesloaded.js"></script>
-<script src="assets/vendors/masonry/masonry.js"></script>
-<script src="assets/vendors/masonry/filter.js"></script>
-<script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
-<script src="assets/js/functions.js"></script>
-<script src="assets/js/contact.js"></script>
-<script src='assets/vendors/switcher/switcher.js'></script>
+    <div class="page-wraper">
+        <div class="loader" id="loader">
+            <div class="loader-container">
+                <div class="globe">
+                    <img src="./world.svg">
+                    <img src="./world.svg">
+                </div>
+
+                <div class="loarding-text">
+                    Pluri'Elles
+                </div>
+            </div>
+        </div>
+
+        <div class="account-form">
+            <div class="account-head" style="background-image:url(assets/images/gallery/PLURIELLES_PHOTOS_DE_DAMES_SITEWEB_NB_LITE.jpg);">
+                <a href="index.html"><img src="assets/images/ullistration/ROLLUP_PLURIELLES-02.png" style="max-height: 500px;" alt=""></a>
+            </div>
+            <div class="account-form-inner">
+                <div class="account-container">
+                    <div class="heading-bx left">
+                        <h2 class="title-head">Login to your <span>Account</span></h2>
+                        <p>Don't have an account? <a href="register.html">Create one here</a></p>
+                    </div>
+                    <form class="contact-bx">
+                        <div class="row placeani">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label>Your Name</label>
+                                        <input name="dzName" type="text" required="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <label>Your Password</label>
+                                        <input name="dzEmail" type="password" class="form-control" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group form-forget">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                        <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                                    </div>
+                                    <a href="forget-password.html" class="ml-auto">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 m-b30">
+                                <button name="submit" type="submit" value="Submit" class="btn button-md">Login</button>
+                            </div>
+                            <div class="col-lg-12">
+                                <h6>Login with Social media</h6>
+                                <div class="d-flex">
+                                    <a class="btn flex-fill m-r5 facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                                    <a class="btn flex-fill m-l5 google-plus" href="#"><i class="fa fa-google-plus"></i>Google Plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- External JavaScripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/vendors/magnific-popup/magnific-popup.js"></script>
+    <script src="assets/vendors/counter/waypoints-min.js"></script>
+    <script src="assets/vendors/counter/counterup.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.js"></script>
+    <script src="assets/vendors/masonry/masonry.js"></script>
+    <script src="assets/vendors/masonry/filter.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src='assets/vendors/switcher/switcher.js'></script>
 </body>
 
 </html>
