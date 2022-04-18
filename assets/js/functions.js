@@ -444,9 +444,11 @@ Theme Version:	1.0.0
 				}
 				
 				var manageLoader = function() {
-					setTimeout(function(){
-						jQuery('#loading-icon-bx').remove();
-					}, 0);
+					setTimeout(function(){/* 
+						jQuery('#loading-icon-bx').remove(); */
+						jQuery('#loader').remove();
+
+					}, 1000);
 				}
 				
 				var codeSecurity = function() {
@@ -464,7 +466,7 @@ Theme Version:	1.0.0
                     };
                 	
                 	document.addEventListener("contextmenu", function(e){
-                      e.preventDefault();
+                      //e.preventDefault();
                     }, false);
                     
                     $(document).keypress("u",function(e) {

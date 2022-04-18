@@ -20,8 +20,8 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+	<link rel="icon" href="assets/images/logo/téléchargement-removebg-preview.png" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/téléchargement.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
 	<title>EduChamp : Education HTML Template </title>
@@ -34,6 +34,8 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 	
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
 	<!-- All PLUGINS CSS ============================================= -->
 	<link rel="stylesheet" type="text/css" href="assets/css/assets.css">
 	
@@ -52,10 +54,134 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendors/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendors/revolution/css/navigation.css">
 	<!-- REVOLUTION SLIDER END -->	
+
+	
+	<style>
+		.loader{
+			position: fixed;
+			height: 100vh;
+			width: 100vw;
+			z-index: 1000;
+			background: #fff;
+		}
+	   .loader > *{
+			margin: 0;
+			padding: 0;
+			left: 0;
+		}
+
+
+body {
+background-color: rgb(255, 255, 255);
+}
+
+.loader-container{
+position: absolute;
+top: 45%;
+transform: translateY(-50%);
+width: 100vw !important;
+padding: 20px 0;
+}
+
+.loader-container::after{
+  position: absolute;
+  content: '';
+  width: 150px;
+  height: 10px;
+  z-index: 1;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(grey, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  animation: elarg 1.3s ease-out 2.5s infinite alternate ;
+}
+
+.loarding-text{
+position: absolute;
+left: 50%;
+z-index: 2;
+font-size: 21px;
+bottom: -35px;
+letter-spacing: 6px;
+font-family: 'Raleway', sans-serif;
+transform: translateX(-50%);
+}
+
+.globe {
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+width: 200px;
+height: 200px;
+background: linear-gradient(to bottom, rgb(214, 220, 223), #bbc4c7);
+border-radius: 50%;
+overflow: hidden;
+animation: swip 1.3s ease-out 2.5s infinite alternate;
+}
+
+.globe img {
+/*filter: brightness(1000%) invert(1);*/
+position: absolute;
+width: 200%;
+height: 110%;
+left: 100%;
+animation-name: move;
+animation-duration: 12s;
+animation-iteration-count: infinite;
+animation-timing-function: linear
+}
+.globe img:nth-child(1) {
+}
+.globe img:nth-child(2) {
+animation-delay: 6s;
+}
+
+@keyframes move {
+0% {
+  transform: translateX(-200%);
+}
+100% {
+  transform: translateX(0%);
+}
+}
+
+@keyframes swip {
+0% {
+  transform: translate(-50%, 10px);
+}
+100% {
+  transform: translateY(0%, -10%);
+}
+}
+
+@keyframes elarg {
+0% {
+	width: 80px;
+}
+100% {
+	width: 150px;
+}
+}
+	</style>
+
 </head>
 <body id="bg">
 <div class="page-wraper">
-<div id="loading-icon-bx"></div>
+	
+    <div class="loader"  id="loader">
+        
+    <div class="loader-container">
+    <div class="globe">
+        <img src="./world.svg">
+        <img src="./world.svg">
+      </div>
+      
+    <div class="loarding-text">
+        Pluri'Elles
+    </div>
+    </div>
+</div>
+
 	<!-- Header Top ==== -->
     <header class="header rs-nav header-transparent">
 		<div class="top-bar">
@@ -75,8 +201,8 @@
 									<option data-icon="flag flag-us">English US</option>
 								</select>
 							</li>
-							<li><a href="login.html">Login</a></li>
-							<li><a href="register.html">Register</a></li>
+							<li><a href="login.html">Se connecter</a></li>
+							<li><a href="register.html">Adhérer</a></li>
 						</ul>
 					</div>
 				</div>
@@ -87,7 +213,7 @@
                 <div class="container clearfix">
 					<!-- Header Logo ==== -->
 					<div class="menu-logo">
-						<a href="index.html"><img src="assets/images/logo-white.png" alt=""></a>
+						<a href="index.html"><img src="assets/images/logo/téléchargement-removebg-preview.png" alt=""></a>
 					</div>
 					<!-- Mobile Nav Button ==== -->
                     <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -252,7 +378,7 @@
 						data-param9="" data-param10="" 
 						data-description="Science says that Women are generally happier">
 							<!-- MAIN IMAGE -->
-							<img src="assets/images/slider/slide1.jpg" alt="" 
+							<img src="assets/images/gallery/PLURIELLES_PHOTOS_DE_DAMES_SITEWEB_NB_LITE.jpg" alt="" 
 								data-bgposition="center center" 
 								data-bgfit="cover" 
 								data-bgrepeat="no-repeat" 
@@ -278,7 +404,7 @@
 								data-paddingright="[0,0,0,0]"
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
-								style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>	
+								style="z-index: 5;background-color:rgba(2, 0, 11, 0.23);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>	
 							<!-- LAYER NR. 2 -->
 							<div class="tp-caption Newspaper-Title   tp-resizeme" 
 								id="slide-100-layer-2" 
@@ -299,30 +425,8 @@
 								data-paddingright="[0,0,0,0]"
 								data-paddingbottom="[10,10,10,10]"
 								data-paddingleft="[0,0,0,0]"
-								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
-									Welcome To University
-							</div>
-
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-100-layer-3" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['210','210','210','210']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better 
+								style="z-index: 6; font-family:'Raleway', sans-serif; font-weight:700; text-align:center; white-space: normal;">
+									Basi batongi <span style="border-bottom: 5px solid gold;">mboka</span>
 							</div>
 							
 							<!-- LAYER NR. 3 -->
@@ -408,7 +512,7 @@
 						data-param9="" data-param10="" 
 						data-description="Science says that Women are generally happier">
 							<!-- MAIN IMAGE -->
-							<img src="assets/images/slider/slide2.jpg" alt="" 
+							<img src="assets/images/gallery/BOK_9472-wecompress.com_-scaled.jpg" alt="" 
 								data-bgposition="center center" 
 								data-bgfit="cover" 
 								data-bgrepeat="no-repeat" 
@@ -434,7 +538,7 @@
 								data-paddingright="[0,0,0,0]"
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
-								style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
+								style="z-index: 5;background-color:rgba(2, 0, 11, 0.25);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
 							</div>
 
 							<!-- LAYER NR. 2 -->
@@ -457,30 +561,8 @@
 								data-paddingright="[0,0,0,0]"
 								data-paddingbottom="[10,10,10,10]"
 								data-paddingleft="[0,0,0,0]"
-								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;text-transform:uppercase;">
-									Welcome To University
-							</div>
-
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-200-layer-3" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['210','210','210','210']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; white-space: nowrap;text-transform:uppercase; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better 
+								style="z-index: 6; font-family: 'Raleway', sans-serif; font-weight:700; text-align:center; white-space: normal;text-transform:capitalize;">
+									Pluri'elles
 							</div>
 							
 							<!-- LAYER NR. 3 -->
