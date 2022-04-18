@@ -447,7 +447,7 @@ Theme Version:	1.0.0
         jQuery('#loading-icon-bx').remove();
         jQuery('#loader').remove();
 
-      }, 0);
+      }, 1000000);
     }
 
     var codeSecurity = function() {
